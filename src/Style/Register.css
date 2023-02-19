@@ -1,0 +1,46 @@
+.form-details{
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    text-align: center;
+    background: #fde4e4;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.form-details small {
+    color: red;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.Registration-form{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+
+.form-group input {
+    background: transparent;
+    border: none;
+}
+
+p{
+    margin: 1.2rem;
+}
+
+p a{
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    width: 50%;
+    margin-top: 2rem;
+    padding: 0.5rem;
+}

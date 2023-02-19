@@ -1,0 +1,111 @@
+.testimonial-info img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+
+.testimonial-info p {
+    width: 50%;
+    margin: 10px auto;
+    color: #626262;
+    font-size: 1rem;
+}
+
+.testimonial-info p i {
+    margin: 0 5px;
+    color: #df2020;
+}
+
+.testimonial-info h2 {
+    color: #212245;
+    margin-bottom: 0;
+}
+
+.testimonial-info h5 {
+    color: #777;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.testimonial-info .stars {
+    color: #ffff00;
+}
+
+.testimonial-info .stars i {
+    font-size: 1.5rem;
+}
+
+.carousel-indicators {
+    bottom: -50px !important;
+}
+
+.carousel-indicators button {
+    background-color: #777 !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+
+.carousel-indicators button.active {
+    background-color: #df2020 !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .testimonial-info img {
+        width: 200px;
+        height: 200px;
+        object-fit: fill;
+    }
+
+
+    .testimonial-info p {
+        width: 70%;
+        margin: 10px auto;
+        font-size: 1rem;
+    }
+
+    .testimonial-info h2 {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+
+    .testimonial-info h5 {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .testimonial-info .stars i {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial-info img {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .testimonial-info p {
+        width: 75%;
+        margin: 10px auto;
+        font-size: 0.8rem;
+    }
+
+    .testimonial-info h2 {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .testimonial-info h5 {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .testimonial-info .stars i {
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+}
