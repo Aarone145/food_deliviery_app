@@ -1,12 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assset/images/res-logo.png'
 import '../../Style/header.css'
 
 import { totalQuantity } from '../../Redux/Shopping-cart/cartSlice'
 
 import { cartToggle } from '../../Redux/Shopping-cart/CartUISlice'
+import { profileToggle } from '../../Redux/Toggle/ProfileToggle'
 
 
 const nav_link = [
@@ -30,11 +31,14 @@ const nav_link = [
 
 const Header = () => {
   
-  const logout = () => {
-    sessionStorage.removeItem("signUp")
-    window.location.reload()
-  }
+  const location = useLocation()
 
+  const [pathname, setPathname] = useState('/home');
+
+  useEffect(() => {
+    console.log(location);
+    setPathname(location.pathname)
+  }, [location.pathname])
 
   const menuRef = useRef(null)
 
@@ -50,6 +54,10 @@ const Header = () => {
     dispatch(cartToggle())
   }
 
+  const toggleProfile = () => {
+    dispatch(profileToggle())
+  }
+
   return (
     <header className='header header_shrink mb-2'>
       <div className='container'>
@@ -61,14 +69,14 @@ const Header = () => {
 
           <div className='navigation' ref={menuRef} onClick={toggleMenu}>
             <div className='menu d-flex align-items-center gap-5'>
-               
+
               {
-                
+
                 nav_link.map((items, index) => (
                   <Link
                     to={items.path}
                     key={index}
-                    className={navClass => navClass.isActive ? 'active_menu' : ''}
+                    className={pathname === items.path ? 'active_menu' : ''}
                   >
                     {items.display}
                   </Link>
@@ -83,12 +91,8 @@ const Header = () => {
               <span className='cart_badge'>{totalquantity}</span>
             </span>
 
-            <span className='user'>
-              <Link to='/login'><i class="fa-solid fa-user"></i></Link>
-            </span>
-
-            <span className='user'>
-              <button onClick={logout} className='logout_btn'><Link to='/login'><i class="fa-solid fa-right-from-bracket"></i></Link></button>
+            <span className='user' onClick={toggleProfile}>
+              <i class="fa-solid fa-user"></i>
             </span>
 
             <span className='mobile_menu' onClick={toggleMenu}>

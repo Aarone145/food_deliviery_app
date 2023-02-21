@@ -40,3 +40,9 @@
     padding: 30px 0px ;
     line-height: 30px;
 }
+
+.related_products h2 {
+    color: #df2020;
+    font-size: 2rem;
+    text-decoration: underline;
+}

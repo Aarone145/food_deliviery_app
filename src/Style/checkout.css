@@ -17,6 +17,17 @@
     margin: 0 auto;
 }
 
+.disable_btn {
+    border: none;
+    padding: 7px 25px;
+    background: #897e7e;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor:none !important;
+    transition: 0.3s;
+}
+
 .checkout_bill {
     background: #fde4e4;
     padding: 30px;

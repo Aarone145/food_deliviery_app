@@ -15,8 +15,6 @@ import { cartItem,totalAmount } from '../../../Redux/Shopping-cart/cartSlice'
 const Cart = () => {
 
 
-debugger
-
 
     const dispatch = useDispatch()
     const cartProduct = useSelector(cartItem)
