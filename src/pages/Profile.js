@@ -40,7 +40,7 @@ const Profile = () => {
                         <p><span>Address</span>: {address} </p>
                         <p><span>Pincode</span>: {pincode} </p>
                         <span className='user d-flex align-item-center justify-content-between mt-2'>
-                            <button className={(address === '') ? 'logout_btn' : 'btn_none'}>
+                            <button className={(address === null) ? 'logout_btn' : 'btn_none'}>
                                 <Link to='/checkout'>Add Address</Link>
                             </button>
                             <button onClick={logout} className='logout_btn'>
